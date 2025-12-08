@@ -124,7 +124,7 @@ h2 {
     justify-content: center;
     color: white;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-    background: url('images/hero-background.jpg') no-repeat center center/cover; /* 请替换为实际图片路径 */
+    background: url('./images/mjsc.png') no-repeat center center/cover; /* 请替换为实际图片路径 */
 }
 
 .hero-content {
