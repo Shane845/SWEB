@@ -6,6 +6,24 @@
     <title>方寸之间：麻将历史与文化之旅</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        .era-image-wrapper {
+            margin: 15px 0;
+            height: 150px; /* 固定高度，确保卡片大小一致 */
+            overflow: hidden;
+            border-radius: 6px;
+        }
+        .era-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* 确保图片覆盖整个区域，可能裁剪边缘 */
+            transition: transform 0.3s ease;
+        }
+        .era-card:hover .era-image {
+            transform: scale(1.05); /* 鼠标悬停时放大一点，增强互动感 */
+        }
+    </style>
 </head>
 <body>
 
@@ -30,95 +48,83 @@
             <p>跨越千年，方寸牌面承载着东方的智慧、艺术和社交哲学</p>
             <a href="#history" class="btn-cta">探索历史长河</a>
         </div>
-        <div class="hero-image-placeholder">
-
+        <div class="hero-image">
+            <img src="./images/hero.jpg" alt="麻将桌和牌堆">
         </div>
     </section>
 
     <section id="history" class="history-section container">
-        <h2>⏳ 发展历程：从起源到定型</h2>
-        <div class="timeline">
+        <h2>🗓️ 方寸年代划分：麻将的历史演变</h2>
+        <div class="eras-grid">
 
-            <div class="timeline-item" data-stage="origin">
-                <h3>起源之谜：叶子戏与马吊牌</h3>
-                <p>麻将的雏形可以追溯到中国古代的纸牌游戏——马吊牌和叶子戏。牌型多变，玩法复杂。</p>
+            <div class="era-card">
+                <h3>起源探索</h3>
+                <div class="era-image-wrapper">
+                    <img src="./images/origin.jpg" alt="麻将起源图示或古老纸牌" class="era-image">
+                </div>
+                <p>起源于明清纸牌，演变至近现代麻将，谁是真正发明者仍有争议。</p>
                 <button class="toggle-details">查看详情</button>
                 <div class="details-content hidden">
-                    <p>这一时期的牌面多为纸质，内容与货币、文学故事相关。是文人雅士的消遣方式。</p>
-                    <div class="history-image-placeholder">
-
-                    </div>
+                    <p>麻将的远祖可追溯到明代的“马吊”和清代的“叶子戏”。其最终的牌张和规则定型，通常被认为是在清末的江浙一带完成。早期的牌具多为竹骨或象牙骨牌。</p>
                 </div>
             </div>
 
-            <div class="timeline-item" data-stage="qing">
-                <h3>明清演变：从纸牌到竹骨牌</h3>
-                <p>为适应户外环境和追求耐用性，纸质牌逐渐被竹子和骨头制成的竹骨牌取代，牌面图案也趋于固定。</p>
+            <div class="era-card">
+                <h3>牌张演变与定型</h3>
+                <div class="era-image-wrapper">
+                    <img src="./images/standard_tiles.jpg" alt="标准麻将牌面" class="era-image">
+                </div>
+                <p>筒、索、万，是麻将牌的核心元素，反映了古代筹码、钱币、竹子和绳索的象征。</p>
                 <button class="toggle-details">查看详情</button>
                 <div class="details-content hidden">
-                    <p>“筒”、“索”、“万”以及字牌系统的定型，麻将的基本结构在此阶段确立。</p>
-                    <div class="history-image-placeholder">
-
-                    </div>
+                    <p>麻将的核心牌张（万、筒、索）被认为是来源于古代的账簿和筹码：万代表银钱、索代表钱串、筒代表铜钱。红中、发财和白板则可能来自早期的箭牌（三元牌）。</p>
                 </div>
             </div>
 
-            <div class="timeline-item" data-stage="modern">
-                <h3>近代定型：全球化与标准统一</h3>
-                <p>19世纪末20世纪初，“麻将”一词开始广泛使用。西方传教士将麻将带回欧美，引发全球热潮。</p>
+            <div class="era-card">
+                <h3>走向世界与竞技化</h3>
+                <div class="era-image-wrapper">
+                    <img src="./images/globalization.jpg" alt="国际麻将比赛或早期洋人玩麻将" class="era-image">
+                </div>
+                <p>20世纪初走向欧美，被译为Mah-Jongg，促成国际规则（MCR）的建立和竞技比赛。</p>
                 <button class="toggle-details">查看详情</button>
                 <div class="details-content hidden">
-                    <p>麻将规则开始在国际上形成各种版本，促使现代麻将比赛和标准化的出现。</p>
-                    <div class="history-image-placeholder">
-
-                    </div>
+                    <p>麻将在20世纪初通过西方商人、外交官和传教士传入欧美，引发了巨大的“麻将热”。为了规范竞技和国际交流，世界麻将组织（WMO）成立并推广了国际标准麻将规则（MCR）。</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="culture" class="culture-section">
-        <div class="container">
-            <h2>🌍 麻将文化：地方规则与牌面艺术</h2>
-
-            <div class="rule-gallery">
-                <h3>地方特色规则</h3>
-                <div class="rule-card">
-                    <h4>四川麻将：血战到底</h4>
-                    <p>特点：定缺、换三张、自摸加番，战斗节奏快。</p>
-                    <div class="culture-image-placeholder">
-                        <img src="./images/resized-mjscRE.png" alt="四川麻将" class="content-image">
-                    </div>
-                </div>
-                <div class="rule-card">
-                    <h4>日本麻将：立直与宝牌</h4>
-                    <p>特点：有“立直”宣告、使用“点棒”计分，重视防守策略。</p>
-                    <div class="culture-image-placeholder">
-                        <img src="./images/resized-rm.png" alt="日本麻将" class="content-image">
-                    </div>
-                </div>
+    <section id="culture" class="culture-section container">
+        <h2>🏺 麻将文化与社会角色</h2>
+        <div class="culture-cards-grid">
+            <div class="culture-card">
+                <img src="./images/social.png" alt="社交" class="culture-icon">
+                <h4>社交的润滑剂</h4>
+                <p>麻将是家庭聚会、朋友交往中不可或缺的娱乐项目，是增进感情、拉近距离的有效工具。</p>
             </div>
-
-            <div class="art-showcase">
-                <h3>牌面艺术鉴赏</h3>
-                <p>麻将牌不仅是工具，更是精湛的工艺品。</p>
-                <div class="art-image-placeholder">
-                    <img src="./images/mjshow.jpg" alt="精美的现代麻将牌特写" class="content-image">
-
-                </div>
+            <div class="culture-card">
+                <img src="./images/mind.png" alt="益智" class="culture-icon">
+                <h4>益智健脑的运动</h4>
+                <p>麻将涉及算牌、记忆、概率和心理博弈，对老年人的认知能力和记忆力有积极作用。</p>
+            </div>
+            <div class="culture-card">
+                <img src="./images/art.png" alt="艺术" class="culture-icon">
+                <h4>传统工艺的载体</h4>
+                <p>早期的竹骨麻将牌是精美的雕刻艺术品，承载了传统手工匠人的智慧和审美。</p>
             </div>
         </div>
     </section>
 
     <section id="interact" class="interact-section container">
-        <h2>🤝 互动体验：分享与测试</h2>
-
-        <div class="quiz-box">
-            <h3>趣味小测试：你是哪张麻将牌？</h3>
+        <h2>🎲 互动体验区：测测你的“麻将格”</h2>
+        <div class="quiz-section">
+            <h3>趣味测试：你的性格像哪张麻将牌？</h3>
             <form id="mahjong-quiz-form">
-                <p>1. 你的社交风格更接近：</p>
-                <input type="radio" name="q1" value="A"> A. 擅长串联资源，四处奔走（发/白）<br>
+                <label for="q1">1. 当你遇到复杂问题时，你的首要反应是：</label>
+                <input type="radio" name="q1" value="A" required> A. 冷静分析，寻找最优解（白板）<br>
                 <input type="radio" name="q1" value="B"> B. 稳定而扎实，追求最大价值（万）<br>
+                <input type="radio" name="q1" value="C"> C. 勇往直前，敢于冒险尝试（红中）<br>
                 <button type="submit" class="btn-submit">获取结果</button>
             </form>
             <div id="quiz-result" class="hidden">你的结果是：**红中**！象征着热情和力量。</div>
@@ -135,28 +141,25 @@
                 </div>
         </div>
     </section>
-<section id="resources" class="resources-section container">
-    <h2>📚 资源库：深入学习</h2>
-    <div class="resource-links">
-        <ul>
-            <li><a href="book-summary.html">《麻将的文化史》</a> - 学术书籍推荐 (本站摘要)</li>
 
-            <li><a href="sichuan-mahjong.html">四川麻将规则详解</a> - (血战到底、换三张)</li>
+    <section id="resources" class="resources-section container">
+        <h2>📚 资源库：深入学习</h2>
+        <div class="resource-links">
+            <ul>
+                <li><a href="book-summary.html">《麻将的文化史》</a> - 学术书籍推荐 (本站摘要)</li>
+                <li><a href="sichuan-mahjong.html">四川麻将规则详解</a> - (血战到底、换三张)</li>
+                <li><a href="tianjin-mahjong.html">天津麻将规则详解</a> - (捉五魁、混一色)</li>
+                <li><a href="riichi-mahjong.html">日本麻将规则进阶</a> - (立直与宝牌系统)</li>
+                <li><a href="wmo-info.html">世界麻将组织官网</a> - 国际竞技机构简介</li>
+                <li><a href="responsible-play.html">理性娱乐，健康生活</a> - 警惕沉迷与赌博风险</li>
+            </ul>
+        </div>
+    </section>
 
-            <li><a href="tianjin-mahjong.html">天津麻将规则详解</a> - (捉五魁、混一色)</li>
-            <li><a href="riichi-mahjong.html">日本麻将规则进阶</a> - (立直、宝牌系统)</li>
-
-            <li><a href="responsible-play.html">理性娱乐，健康生活</a> - (警惕沉迷与赌博)</li>
-
-            <li><a href="wmo-info.html">世界麻将组织官网</a> - (本站简介)</li>
-        </ul>
-    </div>
-</section>
     <footer>
         <p>&copy; 2025 方寸之间：麻将历史与文化之旅. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
-
 </body>
 </html>
